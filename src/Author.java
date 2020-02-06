@@ -1,9 +1,12 @@
+
+
 /**
  * This source file is subject to the license that is bundled with this package in the file LICENSE.
  */
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings({"deprecation", "unchecked"})
 public class Author extends Person {
     private List books;
 
@@ -11,6 +14,7 @@ public class Author extends Person {
         super(firstName, lastName);
         books = new ArrayList();
     }
+
 
     /**
      * @deprecated Use publishedBooks instead
@@ -28,7 +32,6 @@ public class Author extends Person {
         books.add(book);
     }
 
-    @Override
     public String sortName() {
         return String.format("%s, %s", lastName, firstName);
     }
